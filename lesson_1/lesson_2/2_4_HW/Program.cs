@@ -12,3 +12,5 @@ if (num ==7 || num == 6 ) text = "выходной";
 
 Weekend(int.Parse(Console.ReadLine()!));
 
+
+
