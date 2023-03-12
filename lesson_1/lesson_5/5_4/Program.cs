@@ -1,7 +1,6 @@
 ﻿// 5.4 Найдите произведение пар чисел в одномерном массиве.
 // Парой считаем первый и последний элемент, второй и предпоследний
-// и т.д. Результат запишите в новом массиве.
-
+// и т.д. Результат запишите результат.
 
 int[] MultiMas(int[] arr)
 {
@@ -11,9 +10,12 @@ int[] MultiMas(int[] arr)
     {
         newMass[i] = arr[i] * arr[size - 1 - i];
     }
+    if (size % 2 == 1)
+    {
+        newMass[newMass.Length - 1] = arr[arr.Length / 2];
+    }
     return newMass;
 }
-
 Console.WriteLine("Введите длину массива: ");
 int num = int.Parse(Console.ReadLine()!);
 Console.WriteLine("Введите минимальное значение для диапазона случайного числа:  ");
@@ -22,7 +24,7 @@ Console.WriteLine("Введите максимальное значение дл
 int stop = int.Parse(Console.ReadLine()!);
 
 int[] mass = MassNums(num, start, stop);
-Print(mass);
+print(mass);
 
-int[] newNewMass = MultiMas(mass);
-Print(newNewMass);
+int[]newNewMass = MultiMas(mass);
+print(newNewMass);
